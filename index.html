@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Picture Text App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Profile Picture Text Editor</h1>
+        <p class="instructions">Upload an image, then use your mouse to drag.</p>
+        <div class="main-content">
+            <div class="controls">
+                <h3>Controls</h3>
+                <div class="control-group">
+                    <label for="imageLoader">1. Upload Image:</label>
+                    <input type="file" id="imageLoader" name="imageLoader" accept="image/*">
+                </div>
+                <div class="control-group">
+                    <label for="zoom-slider">2. Zoom:</label>
+                    <input type="range" id="zoom-slider" min="0.2" max="3" value="1" step="0.05">
+                </div>
+                <div class="control-group">
+                    <label for="text-input">3. Your Text:</label>
+                    <input type="text" id="text-input" placeholder="Enter text here...">
+                </div>
+                <div class="control-group">
+                    <label for="text-color">4. Text Color:</label>
+                    <input type="color" id="text-color" value="#FFFFFF">
+                </div>
+                <div class="control-group">
+                    <label>5. Text Background:</label>
+                    <div class="color-grid">
+                        <input type="color" id="bg-color-1" value="#000000" title="Background Color 1 / Solid Color">
+                        <input type="color" id="bg-color-2" value="#555555" title="Background Color 2 (for gradient)">
+                    </div>
+                    <label for="bg-opacity-slider">Opacity:</label>
+                    <input type="range" id="bg-opacity-slider" min="0" max="1" value="1" step="0.05">
+                </div>
+                 <div class="control-group">
+                    <label for="font-size-slider">6. Text Size:</label>
+                    <input type="range" id="font-size-slider" min="10" max="50" value="28">
+                </div>
+                <button id="downloadBtn">Download Image</button>
+            </div>
+            <div class="canvas-container">
+                <canvas id="profileCanvas" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
